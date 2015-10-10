@@ -7,18 +7,22 @@ function g:Complexify()
     setlocal number=+1
 endfunction
 
+let g:simplification_is_on = 0
 function! ToggleSimplification()
-    if simplification_is_on
+    if g:simplification_is_on
         " Turn simplification off
-        let simplification_is_on = 0
         setlocal colorcolumn<
+        setlocal number<
+        setlocal relativenumber<
+        setlocal signs<
+        let g:simplification_is_on = 0
     else
+        " Turn simplification on
         setlocal colorcolumn&
         setlocal number&
         setlocal relativenumber&
-        let colorcolumn = &colorcolumn
-        let numbers = &number
-        let simplification_is_on = 1
+        setlocal signs&
+        let g:simplification_is_on = 1
     endif
 endfunction
 

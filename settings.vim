@@ -8,10 +8,8 @@ set smartindent         " turn on smart indenting
 set smarttab            " make tab/bs at the beginning of a line use shiftwidth
 set autoindent          " turn on auto indenting
 set copyindent          " copy the previous indent when autoindenting
-
 set showmatch           " show matching parenthesis
 set matchtime=2         " tenths of a second to blink
-
 set background=dark     " let vim know I use a dark background terminal
 set viminfo='20,\"50    " keep a .viminfo file, limit to 50 entries
 set ruler               " always show the cursor position
