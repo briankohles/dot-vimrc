@@ -1,6 +1,6 @@
 #!/bin/bash
 cd "$(dirname "$0")"
-BDIR="~/.vim/bundle"
+BDIR="$HOME/.vim/bundle"
 VURL="https://github.com/VundleVim/Vundle.vim.git"
 VDIR="$BDIR/Vundle.vim"
 

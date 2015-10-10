@@ -12,10 +12,10 @@ nnoremap <silent> <leader>yf :let @*=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
 
-" Fix meta key for Mac
-let c='a'
-while c <= 'z'
-    exec "set <A-".c.">=\e".c
-    exec "imap \e".c." <A-".c.">"
-    let c = nr2char(1+char2nr(c))
-endw
+"" Fix meta key for Mac
+"let c='a'
+"while c <= 'z'
+"    exec "set <A-".c.">=\e".c
+"    exec "imap \e".c." <A-".c.">"
+"    let c = nr2char(1+char2nr(c))
+"endw
