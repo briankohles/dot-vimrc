@@ -20,3 +20,7 @@ if [ ! -d "$VDIR" ]; then git clone "$VURL" "$VDIR"; fi
 ) > plugins.vim
 
 vim +PluginInstall +qall
+
+if [ -d "$BDIR/term_for_vim" ]; then
+    ( cd "$BDIR/term_for_vim" && npm install )
+fi

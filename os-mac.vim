@@ -12,6 +12,8 @@ nnoremap <silent> <leader>yf :let @*=expand("%:t")<CR>
 " directory name (/something/src)
 nnoremap <silent> <leader>yd :let @*=expand("%:p:h")<CR>
 
+" Don't do this, it causes problems as described here:
+" https://github.com/neovim/neovim/issues/2093#issuecomment-89594661
 "" Fix meta key for Mac
 "let c='a'
 "while c <= 'z'

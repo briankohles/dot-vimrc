@@ -174,31 +174,35 @@ nnoremap <silent> <space> :exe 'silent! normal! za'.(foldlevel('.')?'':'l')<cr>
 vnoremap * y/\V<C-R>=substitute(escape(@@,"/\\"),"\n","\\\\n","ge")<CR><CR>
 vnoremap # y?\V<C-R>=substitute(escape(@@,"?\\"),"\n","\\\\n","ge")<CR><CR>
 " and let <cr> in normal mode clear the hlsearch value
-nnoremap <cr> :nohlsearch<cr>/<bs><cr>
-
-"map   <silent> <F2>    :write<CR>
-map   <silent> <F3>    :Explore<CR>
-nmap  <silent> <F4>    :exe ":ptag ".expand("<cword>")<CR>
-map   <silent> <F6>    :copen<CR>
-map   <silent> <F7>    :cp<CR>
-map   <silent> <F8>    :cn<CR>
-map   <silent> <F12>   :let &number=1-&number<CR>
-
-"imap  <silent> <F2>    <Esc>:write<CR>
-imap  <silent> <F3>    <Esc>:Explore<CR>
-imap  <silent> <F4>    <Esc>:exe ":ptag ".expand("<cword>")<CR>
-imap  <silent> <F6>    <Esc>:copen<CR>
-imap  <silent> <F7>    <Esc>:cp<CR>
-imap  <silent> <F8>    <Esc>:cn<CR>
-imap  <silent> <F12>   :let &number=1-&number<CR>
-
-" make tab in visual mode indent the block
-vmap <tab> >gv
-vmap <s-tab> <gv
-" make tab in normal mode change indent
-nmap <tab> I<tab><esc>
-nmap <s-tab> ^i<bs><esc>
+nnoremap <cr> :noh<cr>:<bs><cr>
 
 inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
+
+nnoremap <F12> :call g:ToggleSimplification()<CR>
+
+"map   <silent> <F2>    :write<CR>
+"map   <silent> <F3>    :Explore<CR>
+"nmap  <silent> <F4>    :exe ":ptag ".expand("<cword>")<CR>
+"map   <silent> <F6>    :copen<CR>
+"map   <silent> <F7>    :cp<CR>
+"map   <silent> <F8>    :cn<CR>
+"map   <silent> <F12>   :let &number=1-&number<CR>
+
+"imap  <silent> <F2>    <Esc>:write<CR>
+"imap  <silent> <F3>    <Esc>:Explore<CR>
+"imap  <silent> <F4>    <Esc>:exe ":ptag ".expand("<cword>")<CR>
+"imap  <silent> <F6>    <Esc>:copen<CR>
+"imap  <silent> <F7>    <Esc>:cp<CR>
+"imap  <silent> <F8>    <Esc>:cn<CR>
+"imap  <silent> <F12>   :let &number=1-&number<CR>
+
+" make tab in visual mode indent the block
+vmap <tab> >gv
+vmap <s-tab> <gv
+
+" make tab in normal mode change indent
+nmap <tab> I<tab><esc>
+nmap <s-tab> ^i<bs><esc>
+

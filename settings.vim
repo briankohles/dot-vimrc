@@ -104,3 +104,4 @@ set switchbuf=useopen  " Switch to an existing buffer if one exists
 " print options  (pc = percentage of the media size)
 set printoptions=left:8pc,right:3pc
 
+set textwidth=72
