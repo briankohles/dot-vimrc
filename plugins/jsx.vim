@@ -1,1 +1,1 @@
-" Plugin 'mxw/vim-jsk'
+" Plugin 'mxw/vim-jsx'
