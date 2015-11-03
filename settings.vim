@@ -32,6 +32,7 @@ set whichwrap+=<,>,h,l
 set shortmess=atI
 set lazyredraw
 set magic
+set autoindent
 
 "set mousehide           " hide mouse when typing
 "set mouse=a             " enable mouse in all modes
