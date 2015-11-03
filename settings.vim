@@ -4,9 +4,7 @@ set shiftwidth=4        " shifting is 4 spaces as well (for ai, >>, <<, etc)
 set shiftround          " use multiple of shiftwidth when indenting with < and >
 set expandtab           " expand tabs to spaces
 set nocindent           " disable c-indenting
-set smartindent         " turn on smart indenting
 set smarttab            " make tab/bs at the beginning of a line use shiftwidth
-set autoindent          " turn on auto indenting
 set copyindent          " copy the previous indent when autoindenting
 set showmatch           " show matching parenthesis
 set matchtime=2         " tenths of a second to blink
@@ -23,15 +21,18 @@ set hlsearch            " hilight search matches
 set autoread            " read open files again when changed outside Vim
 set autowrite           " write a modified buffer on each :next , ...
 set browsedir=current   " which directory to use for the file browser
-"set incsearch           " use incremental search
+set incsearch           " use incremental search
 "set nowrap              " do not wrap lines
 set laststatus=2        " always show status
 set title               " set xterm window title
-set encoding=utf-8      " encoding
-"set noerrorbell         " no error bells
+set encoding=utf8       " encoding
+set noerrorbell         " no error bells
 set visualbell          " visual bell instead of beeping
 set backspace=indent,eol,start
+set whichwrap+=<,>,h,l
 set shortmess=atI
+set lazyredraw
+set magic
 
 "set mousehide           " hide mouse when typing
 "set mouse=a             " enable mouse in all modes
