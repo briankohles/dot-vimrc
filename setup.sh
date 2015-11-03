@@ -25,7 +25,8 @@ SETUP_SCRIPTS=()
     for I in *.vim; do echo "source ~/.vim/plugins/$I"; done
 ) > plugins.vim
 
-vim +PluginInstall +qall
+#vim +PluginInstall +qall
+vim -i NONE -c VundleUpdate -c quitall
 
 for SS in "${SETUP_SCRIPTS[@]}"; do
     plugins/$SS
