@@ -26,7 +26,6 @@ set incsearch           " use incremental search
 set laststatus=2        " always show status
 set title               " set xterm window title
 set encoding=utf8       " encoding
-set noerrorbell         " no error bells
 set visualbell          " visual bell instead of beeping
 set backspace=indent,eol,start
 set whichwrap+=<,>,h,l
