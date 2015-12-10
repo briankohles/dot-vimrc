@@ -6,14 +6,14 @@ function! g:ToggleSimplification()
         setlocal number<
         setlocal relativenumber<
         setlocal list<
-        let g:simplification_is_on = 0
+        call GitGutterSignsEnable()
     else
         " Turn simplification on
         setlocal colorcolumn&
         setlocal number&
         setlocal relativenumber&
         setlocal list&
-        let g:simplification_is_on = 1
+        call GitGutterSignsDisable()
     endif
 endfunction
 

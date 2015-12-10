@@ -94,7 +94,8 @@ set ttimeoutlen=100    " Time to wait for a key sequence.
 set nofoldenable       " Disable folding entirely.
 set foldlevelstart=99  " I really don't like folds.
 " :help fo-table
-set formatoptions=rql1j
+" set formatoptions=rql1j
+set formatoptions=rql1
 set iskeyword+=\$,-    " Add extra characters that are valid parts of variables
 set nostartofline      " Don't go to the start of the line after some commands
 "set scrolloff=3        " Keep three lines below the last line when scrolling
