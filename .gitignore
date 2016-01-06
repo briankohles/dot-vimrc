@@ -4,3 +4,5 @@ sessions
 .netrwhist
 spell
 plugins.vim
+.undo
+.backup
