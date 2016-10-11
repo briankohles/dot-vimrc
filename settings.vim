@@ -1,6 +1,6 @@
-set softtabstop=4       " set the soft tab stop level to 4
-set tabstop=4           " set the tab stop level
-set shiftwidth=4        " shifting is 4 spaces as well (for ai, >>, <<, etc)
+set softtabstop=2       " set the soft tab stop level to 4
+set tabstop=2           " set the tab stop level
+set shiftwidth=2        " shifting is 4 spaces as well (for ai, >>, <<, etc)
 set shiftround          " use multiple of shiftwidth when indenting with < and >
 set expandtab           " expand tabs to spaces
 set nocindent           " disable c-indenting
@@ -63,14 +63,10 @@ syntax enable           " syntax coloring
 syntax sync fromstart   " always resync syntax hilighting from the beginning
 
 " show invisible characters
-set list
-set listchars=""
-set listchars+=tab:▸▸
-set listchars+=trail:•
-set listchars+=extends:>
-set listchars+=precedes:<
-
-"autocmd filetype Makefile set listchars-=tab:▸▸
+set list listchars=trail:_,tab:__,precedes:<,extends:>
+if has( 'multi_byte' )
+    set listchars=trail:•,tab:▸•,precedes:«,extends:»
+endif
 
 set backup             " Turn on backups
 set backupdir=~/.vim/.backup// " Double // causes backups to use full file path
