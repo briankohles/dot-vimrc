@@ -63,9 +63,9 @@ syntax enable           " syntax coloring
 syntax sync fromstart   " always resync syntax hilighting from the beginning
 
 " show invisible characters
-set list listchars=trail:_,tab:__,precedes:<,extends:>
+set list listchars=trail:_,tab:__,precedes:<,extends:>,nbsp:_
 if has( 'multi_byte' )
-    set listchars=trail:•,tab:▸•,precedes:«,extends:»
+    set listchars=trail:•,tab:▸•,precedes:«,extends:»,nbsp:▢
 endif
 
 set backup             " Turn on backups

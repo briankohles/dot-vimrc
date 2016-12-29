@@ -1,3 +1,9 @@
+" mapleader and maplocalleader are here, because they are interpolated
+" into the mapping when it is created, so you have to have them set up
+" front in order for mappings read from other files to work..
+let mapleader=' '
+let maplocalleader='\\'
+
 source ~/.vim/plugins.vim
 source ~/.vim/settings.vim
 source ~/.vim/commands.vim

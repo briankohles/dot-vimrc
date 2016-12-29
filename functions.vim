@@ -2,18 +2,20 @@ let g:simplification_is_on = 0
 function! g:ToggleSimplification()
     if g:simplification_is_on
         " Turn simplification off
+        let g:simplification_is_on = 0
         setlocal colorcolumn<
         setlocal number<
         setlocal relativenumber<
         setlocal list<
-        call GitGutterSignsEnable()
+        let g:gitgutter_enabled = 1
     else
         " Turn simplification on
+        let g:simplification_is_on = 1
         setlocal colorcolumn&
         setlocal number&
         setlocal relativenumber&
         setlocal list&
-        call GitGutterSignsDisable()
+        let g:gitgutter_enabled = 0
     endif
 endfunction
 

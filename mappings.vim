@@ -1,6 +1,3 @@
-let mapleader=','
-let maplocalleader='\\'
-
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
