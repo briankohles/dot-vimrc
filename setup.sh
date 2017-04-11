@@ -35,8 +35,4 @@ done
 cd "$HOME"
 for V in "$HOME/.vimrc" "$HOME/.gvimrc"; do
     ln -sf "$HOME/.vim/vimrc" "$V"
-# If symlinks don't work on windows, then this option will probably be
-# better there.
-#   if [ -e $V ]; then if [ ! -f $HOME/$V ]; then rm -f $HOME/$V; fi; fi
-#   echo 'source $HOME/.vim/vimrc' > $HOME/$V
 done

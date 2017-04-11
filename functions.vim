@@ -7,7 +7,7 @@ function! g:ToggleSimplification()
         setlocal number<
         setlocal relativenumber<
         setlocal list<
-        let g:gitgutter_enabled = 1
+        :GitGutterEnable
     else
         " Turn simplification on
         let g:simplification_is_on = 1
@@ -15,7 +15,7 @@ function! g:ToggleSimplification()
         setlocal number&
         setlocal relativenumber&
         setlocal list&
-        let g:gitgutter_enabled = 0
+        :GitGutterDisable
     endif
 endfunction
 
