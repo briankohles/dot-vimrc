@@ -1,9 +1,12 @@
-set softtabstop=2       " set the soft tab stop level to 4
+filetype plugin indent on
+
+set softtabstop=2       " set the soft tab stop level to 2
 set tabstop=2           " set the tab stop level
-set shiftwidth=2        " shifting is 4 spaces as well (for ai, >>, <<, etc)
+set shiftwidth=2        " shifting is 2 spaces as well (for ai, >>, <<, etc)
 set shiftround          " use multiple of shiftwidth when indenting with < and >
 set expandtab           " expand tabs to spaces
-set nocindent           " disable c-indenting
+set cindent             " disable c-indenting
+set smartindent         " enable smart indenting
 set smarttab            " make tab/bs at the beginning of a line use shiftwidth
 set copyindent          " copy the previous indent when autoindenting
 set showmatch           " show matching parenthesis
@@ -32,7 +35,7 @@ set whichwrap+=<,>,h,l
 set shortmess=atI
 set lazyredraw
 set magic
-set autoindent
+set noautoindent
 
 "set mousehide           " hide mouse when typing
 "set mouse=a             " enable mouse in all modes
@@ -103,3 +106,17 @@ set switchbuf=useopen  " Switch to an existing buffer if one exists
 set printoptions=left:8pc,right:3pc
 
 set textwidth=70
+
+
+
+
+" set indentkeys=0{,0},:,0#,!^F,o,O,e
+" when to reindent the current line:
+"   0{  if you type '{' as the first character in a line
+"   0}  if you type '}' as the first character in a line
+"   :   if you type ':' after a label or case statement
+"   0#  if you type '#' as the first character in a line
+"   !^F if you type ctrl-F (which is not inserted)
+"   o   if you type a <CR> anywhere or use the 'o' command (not in insert mode)
+"   O   if you use the 'O' command (not in insert mode)
+"   e   if you type the second 'e' for an "else" at the start of a line

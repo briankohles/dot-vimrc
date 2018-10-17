@@ -177,6 +177,7 @@ inoremap <F1> <nop>
 nnoremap <F1> <nop>
 vnoremap <F1> <nop>
 
+nnoremap <F11> :ALEToggleBuffer<CR>
 nnoremap <F12> :call g:ToggleSimplification()<CR>
 
 "map   <silent> <F2>    :write<CR>
@@ -203,3 +204,6 @@ vmap <s-tab> <gv
 nmap <tab> I<tab><esc>
 nmap <s-tab> ^i<bs><esc>
 
+" Let C-k and C-j navigate the ALE fixlist
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)

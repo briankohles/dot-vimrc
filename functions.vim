@@ -8,6 +8,7 @@ function! g:ToggleSimplification()
         setlocal relativenumber<
         setlocal list<
         :GitGutterEnable
+        :ALEEnableBuffer
     else
         " Turn simplification on
         let g:simplification_is_on = 1
@@ -16,6 +17,7 @@ function! g:ToggleSimplification()
         setlocal relativenumber&
         setlocal list&
         :GitGutterDisable
+        :ALEDisableBuffer
     endif
 endfunction
 
